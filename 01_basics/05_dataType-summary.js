@@ -36,12 +36,41 @@ const myFunction = function(){
 }
 
 
-console.log(heros);
-console.log(myObj);
-console.log(myFunction());
-
-
-
-
+// console.log(heros);
+// console.log(myObj);
+// console.log(myFunction());
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// --==-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=---=-=-=--=--=-=--=--=-==-=--=--=-=-=-=-=
+
+// primitive  DataType  store in stack
+
+
+let name = "rock"
+let name2nd = name  // name2nd get copy of name 
+name2nd ="ram"
+console.log(name2nd);
+console.log(name);
+
+
+
+//heap No-primitive  DataType  store in heap
+
+
+let studentOne  ={
+    name : "harry",
+    age : 15
+}
+
+console.log(studentOne);
+
+let studentTwo = studentOne  // studentTwo get  org value from studentOne
+
+studentTwo.name = "ARYAN"
+
+console.log(studentTwo);
+
+console.log(studentTwo.name); // StudentTwo have new name
+
+console.log(studentOne.name);// studentone also have same name 
