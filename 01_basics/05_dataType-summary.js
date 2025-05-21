@@ -50,8 +50,8 @@ const myFunction = function(){
 let name = "rock"
 let name2nd = name  // name2nd get copy of name 
 name2nd ="ram"
-console.log(name2nd);
-console.log(name);
+console.log(name2nd);  //with new value
+console.log(name);   // with old value 
 
 
 
