@@ -1,3 +1,6 @@
+// object literals
+
+
 let myobject = {
     name: "Aryan",
     age : 18
@@ -12,9 +15,16 @@ let myobject = {
 
 let mysym = Symbol("key1")
 
-let objNew = {
-    name: "arun",
-    age : 17,
-    sym :mysym
+let object_with_symbol = {
+    name: "rock",
+    age : 50,
+    [mysym] : id
 }
-console.log(typeof objNew["sym"]);
+
+console.log(object_with_symbol);
+
+console.log(object_with_symbol[mysym]);
+
+console.log(typeof object_with_symbol[mysym]);
+
+
