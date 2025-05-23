@@ -38,16 +38,3 @@ let allObj2 = Object.assign({},obj1,obj2,obj3)
 
 console.log(user);
 //console.log(user.fullname.userName.name);
-
-
-const course = {
-    coursename: "JavaScript",
-    price: "Free",
-    courseInstructor: "hitesh"
-}
-
-
-
-let {coursename: getN} = course
-
-console.log(getN);
