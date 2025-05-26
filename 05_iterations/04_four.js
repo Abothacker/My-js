@@ -6,9 +6,9 @@ let myObj ={
     email : "a@aryan.com"
 }
 
-for (const id in myObj) {
-    // console.log(id);  // key
-   // console.log(myObj[id]);  // for value 
+for (const [id] in myObj) {
+    console.log(id);  // key
+   console.log(myObj[id]);  // for value 
 
 }
 
