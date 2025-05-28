@@ -58,7 +58,7 @@
 // }
 
 
-// for loop in object
+// for in loop in object
 
 let myObj = {
     name: "Aryan",
