@@ -58,5 +58,23 @@
 // }
 
 
+// for loop in object
 
+let myObj = {
+    name: "Aryan",
+    age: 15,
+    roll: 37032,
+    roomNo: 17
+}
 
+// Way no 1
+let objKeys = Object.keys(myObj)
+
+for(let key in objKeys){
+    // console.log(key);
+
+    // console.log(objKeys[key]);
+    console.log(myObj[objKeys[key]]);
+    
+    
+}
