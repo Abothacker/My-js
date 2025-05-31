@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Part 3 </title>
+</head>
+<body style=" background-color: #1d1d1d; color: #fff;">
+    
+</body>
+
+<script>
+
+    let mydiv = document.createElement('div')
+    mydiv.className = 'main'
+    mydiv.id = Math.round(Math.random() *10 + 1)
+    mydiv.setAttribute('class','main newclass')
+    mydiv.style.backgroundColor ='green';
+    mydiv.style.padding = '12px'
+    console.log(mydiv);
+    // mydiv.innerText ='MY div aryan'  
+
+    let addText = document.createTextNode ("chai aur code by me ")
+    mydiv.appendChild(addText)
+
+    document.body.append(mydiv)
+
+
+// --------------  direct add html 
+
+    // let mydiv = document.createElement('h1')
+    // let name = "ram"
+    // mydiv.innerHTML= `<h1> hello ${name} </h1>`
+</script>
+</html>
