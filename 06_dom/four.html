@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 4 |  by chai aur code</title>
+</head>
+<body style="background-color: #1d1d1d; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+
+
+// --------------------- V 1
+// let myul = document.querySelector('.language')
+
+// function AddLang(languageName) {
+//     let myli = document.createElement('li')
+//     myli.innerText = languageName  
+//     myul.appendChild(myli)
+// }
+
+// AddLang("java")
+// AddLang("cpp")
+// AddLang("ruby")
+
+
+
+// -------------------- V 2
+function addOptiLanguage(languageName) {
+
+    let li = document.createElement('li')
+    li.appendChild(document.createTextNode(languageName))
+    document.querySelector(".language").appendChild(li)
+    
+}
+
+addOptiLanguage('java')
+addOptiLanguage('cpp')
+
+</script>
+</html>
