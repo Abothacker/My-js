@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+input[type="text"] {
+    width: 60%;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.resultParas {
+    margin-top: 20px;
+}
+
+.lowOrHi {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#newGame {
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: underline;
+}
