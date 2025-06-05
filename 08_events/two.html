@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+</head>
+
+<body style="background-color: #1d1d11; color: aliceblue;">
+
+    <h1>Chai aur code</h1>
+<button id="stop">stop</button>
+
+<p>If the stop button is clicked before 5 seconds, the name does not change.</p>
+
+    <script>
+        let h1 = document.querySelector('h1')
+
+        let changeText = function () {
+            h1.innerText = "Hello Aryan"
+        }
+
+        
+        // setTimeout(()=>{
+        //     console.log("hey aryan");
+
+        // },2000)
+
+
+
+        //-------- button
+        let btn = document.querySelector('#stop')
+
+
+        let mySet = setTimeout(changeText, 2000)
+
+
+
+        btn.addEventListener('click',function(){
+            clearTimeout(mySet)
+            console.log("stop by clicked stop button");
+            
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
