@@ -6,14 +6,19 @@
     <title>Auto name print</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
     <h1>Auto Name print</h1>
     
     <div id="control">
-        
-        <button id="stop">Stop</button>
+
+        <input type="text" id="name" placeholder="Enter name">
+
+        <hr>
+        <p id="message"></p>
+        <hr>
         <button id="start">Start</button>
-        
+        <button id="stop">Stop</button>
+
     </div>
 
 <div id="main">
@@ -29,9 +34,8 @@
 
     let myset;
 
-
-
-    
+    let name = document.querySelector('#name')
+    let message = document.querySelector('#message')
 
     function addName(name) {
         let newh1 = document.createElement('h1')
@@ -40,21 +44,41 @@
     }
 
     startbtn.addEventListener('click',function(){
-        myset = setInterval(() => {
-            addName("rocky")
-            
-            
-        }, 1000);
+
+        if (name.value == ''){
+      
+             dispalyMessage(`Enter Valid Name pls..`)
+        } else{
+
+            message.innerText = ''
+            myset = setInterval(() => {
+                addName(name.value)
+                
+                
+            }, 1000);
+        }
+        
+
 
     })
 
     stopbtn.addEventListener('click',function(){
         clearInterval(myset)
 
-        addName("Auto Name stop")
+ 
+        dispalyMessage("Auto Name stop")
         
-        console.log(myset);
+    
     })
+
+
+    function dispalyMessage(text) {
+
+        message.innerText = text
+        
+    }
+
+
 
 </script>
 </html>
