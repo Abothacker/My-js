@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto name print</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Auto Name print</h1>
+    
+    <div id="control">
+        
+        <button id="stop">Stop</button>
+        <button id="start">Start</button>
+        
+    </div>
+
+<div id="main">
+    
+</div>
+</body>
+
+<script>
+    const main = document.querySelector('#main')
+
+    let stopbtn = document.querySelector('#stop')
+    let startbtn = document.querySelector('#start')
+
+    let myset;
+
+
+
+    
+
+    function addName(name) {
+        let newh1 = document.createElement('h1')
+        newh1.innerText = name
+        main.append(newh1)
+    }
+
+    startbtn.addEventListener('click',function(){
+        myset = setInterval(() => {
+            addName("rocky")
+            
+            
+        }, 1000);
+
+    })
+
+    stopbtn.addEventListener('click',function(){
+        clearInterval(myset)
+
+        addName("Auto Name stop")
+        
+        console.log(myset);
+    })
+
+</script>
+</html>
