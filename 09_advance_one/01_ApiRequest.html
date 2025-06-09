@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiRequest</title>
+    <style>#info {
+  width: 300px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#info p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333;
+}
+</style>
+</head>
+
+<body style="background-color: #1d1d1d; color: #fff;">
+
+
+</body>
+
+<script>
+
+    const card = document.createElement('div')
+    const body = document.querySelector('body')
+
+
+    // api start
+    const Api_url = 'https://api.github.com/users/hiteshchoudhary'
+
+    let xhr = new XMLHttpRequest()
+    xhr.open("GET", Api_url)
+
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            // console.log(this.responseText)
+            // console.log(typeof this.responseText)
+            const data = JSON.parse(this.responseText)
+
+           
+            card.innerHTML = `<div id="info">
+
+                            <img src="${data.avatar_url}" alt="profile image">
+                            <p>Name : ${data.name}</p>
+                            <p>followers : ${data.followers}</p>
+                            <p>bio :${data.bio} </p>
+
+                            </div>`
+
+        }
+
+
+    }
+    xhr.send()
+
+    // api end
+
+    // card start
+
+
+    body.append(card)
+
+
+</script>
+
+</html>
